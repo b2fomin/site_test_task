@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Http\Requests\API\Job\DestroyRequest;
 use App\Http\Requests\API\Job\IndexRequest;
+use App\Http\Requests\API\Job\StoreRequest;
+use App\Http\Requests\API\Job\UpdateRequest;
 use App\Http\Resources\API\Job\IndexResource;
 use App\Http\Resources\API\SuccessResource;
 use Illuminate\Http\Request;
@@ -39,7 +42,7 @@ class JobController extends BaseController
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
         try {
             $data = $request->validated();
@@ -50,17 +53,11 @@ class JobController extends BaseController
         return new SuccessResource([]);
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(string $id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(string $id)
     {
         //
@@ -69,16 +66,28 @@ class JobController extends BaseController
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(UpdateRequest $request)
     {
-        //
+        try {
+            $data = $request->validated();
+            $this->service->update($data);
+        } catch (\Exception $e) {
+            return new SuccessResource(['err_msg' => $e->getMessage()]);
+        }
+        return new SuccessResource([]);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(DestroyRequest $request)
     {
-        //
+        try {
+            $data = $request->validated();
+            $this->service->delete($data);
+        } catch (\Exception $e) {
+            return new SuccessResource(['err_msg' => $e->getMessage()]);
+        }
+        return new SuccessResource([]);
     }
 }
