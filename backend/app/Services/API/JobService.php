@@ -2,6 +2,7 @@
 
 namespace App\Services\API;
 
+use App\Http\Filters\JobFilter;
 use App\Models\Job;
 
 class JobService
@@ -17,5 +18,10 @@ class JobService
 
     public function delete(array $data) {
         Job::findOrFail($data['id'])->delete();
+    }
+
+    public function filter(array $query_params) {
+        $filter = app()->make(JobFilter::class, ['queryParams' => $query_params]);
+        return Job::filter($filter);
     }
 }
