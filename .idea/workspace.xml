@@ -6,9 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="917957e9-63f5-4ce8-b50e-8edaa84417ea" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/Models/Job.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/Models/Job.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/database/migrations/0001_01_01_000002_create_jobs_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/vite.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Vue Composition API Component" />
         <option value="PHP File" />
+        <option value="Vue Composition API Component" />
       </list>
     </option>
   </component>
@@ -227,7 +230,7 @@
       <workItem from="1755463577853" duration="1182000" />
       <workItem from="1755465684049" duration="161000" />
       <workItem from="1755465891848" duration="401000" />
-      <workItem from="1755536372818" duration="1611000" />
+      <workItem from="1755536372818" duration="3870000" />
     </task>
     <servers />
   </component>
