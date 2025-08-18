@@ -2,8 +2,7 @@
 
 namespace Database\Seeders\API;
 
-use App\Models\Job;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\API\Job;
 use Illuminate\Database\Seeder;
 
 class JobSeeder extends Seeder

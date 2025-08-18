@@ -3,7 +3,7 @@
 namespace App\Services\API;
 
 use App\Http\Filters\JobFilter;
-use App\Models\Job;
+use App\Models\API\Job;
 
 class JobService
 {

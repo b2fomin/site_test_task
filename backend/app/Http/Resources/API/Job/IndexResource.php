@@ -3,7 +3,7 @@
 namespace App\Http\Resources\API\Job;
 
 use App\Http\Filters\JobFilter;
-use App\Models\Job;
+use App\Models\API\Job;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
