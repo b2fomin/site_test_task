@@ -4,15 +4,15 @@ namespace App\Http\Controllers\API;
 
 use App\Helpers\PaginationHelper;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\API\Job\DestroyRequest;
-use App\Http\Requests\API\Job\IndexRequest;
-use App\Http\Requests\API\Job\StoreRequest;
-use App\Http\Requests\API\Job\UpdateRequest;
-use App\Http\Resources\API\Job\IndexResource;
+use App\Http\Requests\API\Project\DestroyRequest;
+use App\Http\Requests\API\Project\IndexRequest;
+use App\Http\Requests\API\Project\StoreRequest;
+use App\Http\Requests\API\Project\UpdateRequest;
+use App\Http\Resources\API\Project\IndexResource;
 use App\Http\Resources\API\SuccessResource;
 use App\Services\API\JobService;
 
-class JobController extends Controller
+class ProjectController extends Controller
 {
     protected JobService $service;
     public final function __construct(JobService $service) {

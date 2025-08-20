@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\API\Job;
+namespace App\Http\Requests\API\Project;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -22,14 +22,15 @@ class StoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'block' => 'string',
-            'floor' => 'string',
-            'project' => 'string',
-            'room' => 'string',
-            'executor' => 'string',
-            'status' => 'string',
-            'date_start' => 'date',
-            'date_end' => 'date',
+            'code' => 'string|unique|required',
+            'name' => 'string|required',
+            'icon' => 'string|required',
+            'description' => 'string|required',
+            'contractor' => 'string|required',
+            'address' => 'address|required',
+            'date_start' => 'date|required',
+            'date_end' => 'date|required',
+            'budget' => 'float|required'
         ];
     }
 }

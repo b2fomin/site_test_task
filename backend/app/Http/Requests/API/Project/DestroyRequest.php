@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Http\Requests\API\Job;
+namespace App\Http\Requests\API\Project;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreRequest extends FormRequest
+class DestroyRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
      */
     public function authorize(): bool
     {
-        return true;
+        return false;
     }
 
     /**
@@ -22,14 +22,7 @@ class StoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'block' => 'string',
-            'floor' => 'string',
-            'project' => 'string',
-            'room' => 'string',
-            'executor' => 'string',
-            'status' => 'string',
-            'date_start' => 'date',
-            'date_end' => 'date',
+            'id' => 'uuid|required'
         ];
     }
 }
