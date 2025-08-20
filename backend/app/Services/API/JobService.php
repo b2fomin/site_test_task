@@ -12,8 +12,7 @@ class JobService
     }
 
     public function update(array $data) {
-        $job = Job::findOrFail($data['id']);
-        $job->update($data);
+        Job::findOrFail($data['id'])->update($data);
     }
 
     public function delete(array $data) {

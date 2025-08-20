@@ -1,7 +1,10 @@
 <?php
 
-namespace Database\Factories;
+namespace Database\Factories\API;
 
+use App\Models\API\Block;
+use App\Models\API\Project;
+use App\Models\API\Room;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,12 +20,13 @@ class JobFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->name(),
-            'project'=> $this->faker->jobTitle(),
+            'block_id' => $this->faker->numberBetween(1, Block::count()),
+            'project_id'=> $this->faker->numberBetween(1, Project::count()),
             'floor' => $this->faker->randomDigit(),
-            'object' => $this->faker->text(20),
+            'room_id' => $this->faker->numberBetween(1, Room::count()),
             'executor' => $this->faker->text(20),
-            'period' => $this->faker->dateTimeInInterval(),
+            'date_start' => $this->faker->dateTime(),
+            'date_end' => $this->faker->dateTime(),
             'status' => $this->faker->randomElement(['processing', 'done'])
         ];
     }

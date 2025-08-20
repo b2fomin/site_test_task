@@ -4,7 +4,10 @@
 namespace App\Http\Filters;
 
 
+use App\Models\API\Block;
+use App\Models\API\Project;
 use Illuminate\Database\Eloquent\Builder;
+use function Sodium\add;
 
 class JobFilter extends AbstractFilter
 {
@@ -12,13 +15,15 @@ class JobFilter extends AbstractFilter
     {
         return [
             'id' => [$this, 'id'],
-            'name' => [$this, 'name'],
-            'project' => [$this, 'project'],
+            'block_id' => [$this, 'block_id'],
+            'project_id' => [$this, 'project_id'],
             'floor' => [$this, 'floor'],
-            'object' => [$this, 'object'],
+            'room_id' => [$this, 'room_id'],
             'executor' => [$this, 'executor'],
-            'status' => [$this, 'project'],
-            'period' => [$this, 'period'],
+            'work_type_id' => [$this, 'work_type_id'],
+            'date_start' => [$this, 'date_start'],
+            'date_end' => [$this, 'date_end'],
+            'status' => [$this, 'status'],
 
         ];
     }
@@ -27,31 +32,59 @@ class JobFilter extends AbstractFilter
         $builder->find($value);
     }
 
-    public function name(Builder $builder, $value) {
-        $builder->where("name", $value);
+    public function block_id(Builder $builder, $value) {
+        $builder->where('block_id', Block::where('name', $value)->first()->id);
     }
 
-    public function project(Builder $builder, $value) {
-        $builder->where("project", $value);
+    public function project_id(Builder $builder, $value) {
+        $builder->where("project_id",Project::where('name', $value)->first()->id);
     }
 
     public function floor(Builder $builder, $value) {
         $builder->where("floor", $value);
     }
 
-    public function object(Builder $builder, $value) {
-        $builder->where("object", $value);
+    public function room_id(Builder $builder, $value) {
+        $builder->where("room_id", $value);
     }
+
 
     public function executor(Builder $builder, $value) {
         $builder->where("executor", $value);
+    }
+
+    public function work_type_id(Builder $builder, $value) {
+        $builder->where("work_type_id", $value);
+    }
+
+    public function date_start(Builder $builder, $value) {
+        $builder->where("date_start", $value);
+    }
+
+    public function date_end(Builder $builder, $value) {
+        $builder->where("date_end", $value);
     }
 
     public function status(Builder $builder, $value) {
         $builder->where("status", $value);
     }
 
-    public function period(Builder $builder, $value) {
-        $builder->where("period", $value);
+    public function apply(Builder $builder) {
+        $jobs = parent::apply($builder);
+
+        return $jobs->map(function ($job) {
+            $res = $job->toArray();
+
+            $res['block'] = $job->block()->first()->name;
+            unset($res['block_id']);
+
+            $res['project'] = $job->project()->first()->name;
+            unset($res['project_id']);
+
+            $res['room'] = $job->room()->first()->name;
+            unset($res['room_id']);
+
+            return $res;
+        });
     }
 }

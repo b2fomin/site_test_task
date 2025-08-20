@@ -23,13 +23,14 @@ class IndexRequest extends FormRequest
     {
         return [
             'id' => 'integer',
-            'name' => 'string',
+            'block' => 'string',
             'floor' => 'string',
             'project' => 'string',
-            'object' => 'string',
+            'room' => 'string',
             'executor' => 'string',
             'status' => 'string',
-            'period' => 'string',
+            'date_start' => 'date',
+            'date_end' => 'date',
             'page' => 'integer',
             'per_page' => 'integer',
 

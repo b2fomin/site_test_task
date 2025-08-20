@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Helpers\PaginationHelper;
 use App\Http\Requests\API\Job\DestroyRequest;
 use App\Http\Requests\API\Job\IndexRequest;
 use App\Http\Requests\API\Job\StoreRequest;
@@ -28,12 +29,13 @@ class JobController extends BaseController
             $per_page = $data['per_page'];
             unset($data['per_page']);
         }
-
-        $jobs = $this->service->filter(array_filter($data))->paginate($per_page, ['*'], 'page', $page);
+        $jobs = PaginationHelper::paginate($this->service->filter(array_filter($data)), $per_page, $page);
 
         return IndexResource::collection($jobs);
     }
-
+    /**
+     * Show the form for creating a new resource.
+     */
     public function create(array $data)
     {
         //
@@ -52,12 +54,16 @@ class JobController extends BaseController
         }
         return new SuccessResource([]);
     }
-
+    /**
+     * Display the specified resource.
+     */
     public function show(string $id)
     {
         //
     }
-
+    /**
+     * Show the form for editing the specified resource.
+     */
     public function edit(string $id)
     {
         //

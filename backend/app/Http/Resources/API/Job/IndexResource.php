@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources\API\Job;
 
+use App\Helpers\PaginationHelper;
 use App\Http\Filters\JobFilter;
 use App\Models\API\Job;
 use Illuminate\Http\Request;
@@ -23,18 +24,19 @@ class IndexResource extends JsonResource
 
         $filter = app()->make(JobFilter::class, ['queryParams' => $query->all()]);
 
-        $filtered_operations = Job::filter($filter)->paginate($per_page, ['*'], 'page', $page);
+        $filtered_operations = PaginationHelper::paginate(Job::filter($filter), $per_page, $page);
 
         return [
-            'id' => $this->id,
+            'id' => $this['id'],
             'pages_num' => $filtered_operations->lastPage(),
-            'name' => $this->name,
-            'project' => $this->project,
-            'floor' => $this->floor,
-            'object' => $this->object,
-            'executor' => $this->executor,
-            'period' => $this->period,
-            'status' => $this->status
+            'block' => $this['block'],
+            'project' => $this['project'],
+            'floor' => $this['floor'],
+            'room' => $this['room'],
+            'executor' => $this['executor'],
+            'date_start' => $this['date_start'],
+            'date_end' => $this['date_end'],
+            'status' => $this['status']
         ];
     }
 }

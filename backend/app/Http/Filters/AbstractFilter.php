@@ -32,7 +32,9 @@ abstract class AbstractFilter implements FilterInterface
                 call_user_func($callback, $builder, $this->queryParams[$name]);
             }
         }
+        return $builder->get();
     }
+
 
     /**
      * @param Builder $builder

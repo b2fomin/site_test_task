@@ -18,4 +18,12 @@ class Job extends Model
     public function project() {
         return $this->belongsTo(Project::class);
     }
+
+    public function block() {
+        return $this->belongsTo(Block::class);
+    }
+
+    public function room() {
+        return $this->belongsTo(Room::class);
+    }
 }

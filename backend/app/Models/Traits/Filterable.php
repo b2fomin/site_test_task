@@ -17,8 +17,6 @@ trait Filterable
      */
     public function scopeFilter(Builder $builder, FilterInterface $filter)
     {
-        $filter->apply($builder);
-
-        return $builder;
+        return $filter->apply($builder);
     }
 }
