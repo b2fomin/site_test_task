@@ -19,15 +19,10 @@ class IndexResource extends JsonResource
     {
         $query = $request->query;
 
-        $page = $query->get('page');
         $per_page = $query->get('per_page');
 
-        $filter = app()->make(ProjectFilter::class, ['queryParams' => $query->all()]);
-
-        $filtered_operations = PaginationHelper::paginate(Project::filter($filter), $per_page, $page);
-
         return [
-            'pages_num' => $filtered_operations->lastPage(),
+            'pages_num' => (int)(Project::count() / $per_page),
             'code' => $this['code'],
             'name' => $this['name'],
             'icon' => $this['icon'],

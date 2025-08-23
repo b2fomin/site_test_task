@@ -58,11 +58,11 @@ class JobFilter extends AbstractFilter
     }
 
     public function date_start(Builder $builder, $value) {
-        $builder->where("date_start", $value);
+        $builder->where("date_start", '>', $value);
     }
 
     public function date_end(Builder $builder, $value) {
-        $builder->where("date_end", $value);
+        $builder->where("date_end", '<', $value);
     }
 
     public function status(Builder $builder, $value) {

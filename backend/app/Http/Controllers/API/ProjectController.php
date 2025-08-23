@@ -10,12 +10,12 @@ use App\Http\Requests\API\Project\StoreRequest;
 use App\Http\Requests\API\Project\UpdateRequest;
 use App\Http\Resources\API\Project\IndexResource;
 use App\Http\Resources\API\SuccessResource;
-use App\Services\API\JobService;
+use App\Services\API\ProjectService;
 
 class ProjectController extends Controller
 {
-    protected JobService $service;
-    public final function __construct(JobService $service) {
+    protected ProjectService $service;
+    public final function __construct(ProjectService $service) {
         $this->service = $service;
     }
     /**
@@ -34,9 +34,8 @@ class ProjectController extends Controller
             $per_page = $data['per_page'];
             unset($data['per_page']);
         }
-        $jobs = PaginationHelper::paginate($this->service->filter(array_filter($data)), $per_page, $page);
-
-        return IndexResource::collection($jobs);
+        $projects = PaginationHelper::paginate($this->service->filter(array_filter($data)), $per_page, $page);
+        return IndexResource::collection($projects);
     }
     /**
      * Show the form for creating a new resource.

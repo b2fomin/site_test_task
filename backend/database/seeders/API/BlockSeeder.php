@@ -12,6 +12,6 @@ class BlockSeeder extends Seeder
      */
     public function run(): void
     {
-        Block::factory(20)->create();
+        Block::factory(100)->create();
     }
 }

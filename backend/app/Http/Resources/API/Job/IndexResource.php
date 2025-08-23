@@ -24,10 +24,8 @@ class IndexResource extends JsonResource
 
         $filter = app()->make(JobFilter::class, ['queryParams' => $query->all()]);
 
-        $filtered_operations = PaginationHelper::paginate(Job::filter($filter), $per_page, $page);
-
         return [
-            'pages_num' => $filtered_operations->lastPage(),
+            'pages_num' => (int)(Job::count() / $per_page),
             'block' => $this['block'],
             'project' => $this['project'],
             'floor' => $this['floor'],

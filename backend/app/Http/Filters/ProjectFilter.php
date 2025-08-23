@@ -4,7 +4,7 @@ namespace App\Http\Filters;
 
 use Illuminate\Database\Eloquent\Builder;
 
-class ProjectFilter
+class ProjectFilter extends AbstractFilter
 {
     protected function getCallbacks(): array
     {

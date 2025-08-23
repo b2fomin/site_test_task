@@ -6,12 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="917957e9-63f5-4ce8-b50e-8edaa84417ea" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/Http/Controllers/API/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/Http/Controllers/API/ProjectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/Http/Filters/JobFilter.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/Http/Filters/JobFilter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/Http/Filters/ProjectFilter.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/Http/Filters/ProjectFilter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/Http/Resources/API/Job/IndexResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/Http/Resources/API/Job/IndexResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/Http/Resources/API/Project/IndexResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/Http/Resources/API/Project/IndexResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/database/seeders/API/BlockSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/database/seeders/API/BlockSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/database/seeders/API/ProjectSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/database/seeders/API/ProjectSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/database/seeders/API/RoomSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/database/seeders/API/RoomSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Navbar/Top.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Navbar/Top.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/vite.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,13 +34,14 @@
       <list>
         <option value="PHP File" />
         <option value="Vue Composition API Component" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="$PROJECT_DIR$/../../../../../XAMPP/php/php.exe">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="$PROJECT_DIR$/../../../../XAMPP/php/php.exe">
     <include_path>
       <path value="$PROJECT_DIR$/backend/vendor/nikic/php-parser" />
       <path value="$PROJECT_DIR$/backend/vendor/league/commonmark" />
@@ -164,31 +172,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/Programming/PHP/Laravel/work/test_task_2",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.stylelint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.stylelint": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "JavaScript.Libraries",
-    "ts.external.directory.path": "D:\\JetBrains\\PhpStorm 2025.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Programming/PHP/Laravel/nechaev_test_task&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;JavaScript.Libraries&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\JetBrains\\PhpStorm 2025.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "vue.recent.templates": [
-      "Vue Composition API Component"
+  &quot;keyToStringList&quot;: {
+    &quot;vue.recent.templates&quot;: [
+      &quot;Vue Composition API Component&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner configuration_file="$PROJECT_DIR$/backend/phpunit.xml" scope="XML" use_alternative_configuration_file="true" />
@@ -231,6 +240,13 @@
       <workItem from="1755465684049" duration="161000" />
       <workItem from="1755465891848" duration="401000" />
       <workItem from="1755536372818" duration="3870000" />
+      <workItem from="1755689763719" duration="4535000" />
+      <workItem from="1755884427667" duration="1285000" />
+      <workItem from="1755890001110" duration="3404000" />
+      <workItem from="1755935437900" duration="47000" />
+      <workItem from="1755941778467" duration="3045000" />
+      <workItem from="1755966315668" duration="2825000" />
+      <workItem from="1755975161794" duration="3520000" />
     </task>
     <servers />
   </component>
