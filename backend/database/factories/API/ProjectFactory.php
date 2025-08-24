@@ -17,14 +17,14 @@ class ProjectFactory extends Factory
     public function definition(): array
     {
         return [
-            'code' => $this->faker->unique()->word(),
+            'code' => $this->faker->unique()->uuid(),
             'name' => $this->faker->name(),
             'icon' => $this->faker->imageUrl(),
             'description' => $this->faker->text(),
             'contractor' => $this->faker->name(),
             'address' => $this->faker->address(),
-            'date_start' => $this->faker->date(),
-            'date_end' => $this->faker->date(),
+            'date_start' => $this->faker->dateTimeBetween('-3 months', 'now'),
+            'date_end' => $this->faker->dateTimeBetween('-3 months', '+ 3 months'),
             'budget' => $this->faker->randomFloat(),
         ];
     }

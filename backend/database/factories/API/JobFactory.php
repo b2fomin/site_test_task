@@ -25,8 +25,8 @@ class JobFactory extends Factory
             'floor' => $this->faker->randomDigit(),
             'room_id' => $this->faker->numberBetween(1, Room::count()),
             'executor' => $this->faker->text(20),
-            'date_start' => $this->faker->dateTime(),
-            'date_end' => $this->faker->dateTime(),
+            'date_start' => $this->faker->dateTimeBetween('-3 months', 'now'),
+            'date_end' => $this->faker->dateTimeBetween('-3 months', '+ 3 months'),
             'status' => $this->faker->randomElement(['processing', 'done'])
         ];
     }

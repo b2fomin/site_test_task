@@ -1,15 +1,16 @@
 <script setup lang="ts">
 import {IDashboardData} from "@/components/TypesList.types";
+import {computed, toRef} from 'vue';
 
-  const props = defineProps<{
+  let props = defineProps<{
     data: IDashboardData
   }>();
 
   let numbers = Object.keys(props.data);
   let texts = ['Всего работ', 'Завершено', 'В процессе', 'Просрочено'];
-  let arr = texts.map((e, i) => {
+  let arr = computed(() => {return texts.map((e, i) => {
     return [e, props.data[numbers[i]]]
-  });
+  })});
 </script>
 
 <template>

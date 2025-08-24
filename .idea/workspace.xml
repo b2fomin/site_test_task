@@ -6,19 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="917957e9-63f5-4ce8-b50e-8edaa84417ea" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/Http/Controllers/API/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/Http/Controllers/API/ProjectController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/Http/Filters/JobFilter.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/Http/Filters/JobFilter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/Http/Filters/ProjectFilter.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/Http/Filters/ProjectFilter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/Http/Resources/API/Job/IndexResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/Http/Resources/API/Job/IndexResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/Http/Resources/API/Project/IndexResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/Http/Resources/API/Project/IndexResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/database/seeders/API/BlockSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/database/seeders/API/BlockSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/database/seeders/API/ProjectSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/database/seeders/API/ProjectSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/database/seeders/API/RoomSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/database/seeders/API/RoomSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Navbar/Top.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Navbar/Top.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Dashboard.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,6 +236,7 @@
       <workItem from="1755941778467" duration="3045000" />
       <workItem from="1755966315668" duration="2825000" />
       <workItem from="1755975161794" duration="3520000" />
+      <workItem from="1755985915065" duration="6297000" />
     </task>
     <servers />
   </component>

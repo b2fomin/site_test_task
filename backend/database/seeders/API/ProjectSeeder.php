@@ -12,6 +12,6 @@ class ProjectSeeder extends Seeder
      */
     public function run(): void
     {
-        Project::factory(100)->create();
+        Project::factory(1000)->create();
     }
 }
