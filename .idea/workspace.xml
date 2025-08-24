@@ -7,7 +7,7 @@
     <list default="true" id="917957e9-63f5-4ce8-b50e-8edaa84417ea" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Dashboard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/TypesList.types.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/TypesList.types.d.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="PHP File" />
-        <option value="Vue Composition API Component" />
         <option value="TypeScript File" />
+        <option value="Vue Composition API Component" />
       </list>
     </option>
   </component>
@@ -236,7 +236,8 @@
       <workItem from="1755941778467" duration="3045000" />
       <workItem from="1755966315668" duration="2825000" />
       <workItem from="1755975161794" duration="3520000" />
-      <workItem from="1755985915065" duration="6297000" />
+      <workItem from="1755985915065" duration="9307000" />
+      <workItem from="1756021757198" duration="2799000" />
     </task>
     <servers />
   </component>
