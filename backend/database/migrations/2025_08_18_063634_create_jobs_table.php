@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreignId('project_id');
             $table->unsignedBigInteger('floor');
             $table->foreignId('room_id');
+            $table->foreignId('task_id');
             $table->string('executor');
 //            $table->unsignedBigInteger('work_type_id');
             $table->dateTime('date_start');

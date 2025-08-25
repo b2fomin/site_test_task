@@ -17,19 +17,14 @@ class IndexResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        $query = $request->query;
-
-        $page = $query->get('page');
-        $per_page = $query->get('per_page');
-
-        $filter = app()->make(JobFilter::class, ['queryParams' => $query->all()]);
-
         return [
-            'pages_num' => (int)(Job::count() / $per_page),
             'block' => $this['block'],
             'project' => $this['project'],
             'floor' => $this['floor'],
             'room' => $this['room'],
+            'task' => $this['task'],
+            'category' => $this['category'],
+            'task_id' => $this['task_id'],
             'executor' => $this['executor'],
             'date_start' => $this['date_start'],
             'date_end' => $this['date_end'],

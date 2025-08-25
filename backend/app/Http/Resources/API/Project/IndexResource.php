@@ -17,12 +17,7 @@ class IndexResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        $query = $request->query;
-
-        $per_page = $query->get('per_page');
-
         return [
-            'pages_num' => (int)(Project::count() / $per_page),
             'code' => $this['code'],
             'name' => $this['name'],
             'icon' => $this['icon'],

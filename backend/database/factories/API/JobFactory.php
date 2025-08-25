@@ -5,6 +5,7 @@ namespace Database\Factories\API;
 use App\Models\API\Block;
 use App\Models\API\Project;
 use App\Models\API\Room;
+use App\Models\API\Task;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -24,6 +25,7 @@ class JobFactory extends Factory
             'project_id'=> $this->faker->numberBetween(1, Project::count()),
             'floor' => $this->faker->randomDigit(),
             'room_id' => $this->faker->numberBetween(1, Room::count()),
+            'task_id' => $this->faker->numberBetween(1, Task::count()),
             'executor' => $this->faker->text(20),
             'date_start' => $this->faker->dateTimeBetween('-3 months', 'now'),
             'date_end' => $this->faker->dateTimeBetween('-3 months', '+ 3 months'),

@@ -6,6 +6,7 @@ namespace App\Http\Filters;
 
 use App\Models\API\Block;
 use App\Models\API\Project;
+use App\Models\API\Task;
 use Illuminate\Database\Eloquent\Builder;
 use function Sodium\add;
 
@@ -24,7 +25,7 @@ class JobFilter extends AbstractFilter
             'date_start' => [$this, 'date_start'],
             'date_end' => [$this, 'date_end'],
             'status' => [$this, 'status'],
-
+            'task_id' => [$this, 'task_id'],
         ];
     }
 
@@ -69,6 +70,10 @@ class JobFilter extends AbstractFilter
         $builder->where("status", $value);
     }
 
+    public function task(Builder $builder, $value) {
+        $builder->where("task_id", $value);
+    }
+
     public function apply(Builder $builder) {
         $jobs = parent::apply($builder);
 
@@ -83,6 +88,10 @@ class JobFilter extends AbstractFilter
 
             $res['room'] = $job->room()->first()->name;
             unset($res['room_id']);
+
+            $task = Task::findOrFail($res['task_id']);
+            $res['task'] = $task->name;
+            $res['category'] = $task->category_name;
 
             return $res;
         });
